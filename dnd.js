@@ -1,29 +1,29 @@
 // Custom Inputs: Feel free to manipulate these as you wish...
-const firstName = '';
-const middleName = '';
-const lastName = '';
-const nickname = '';
-const pronouns = '';
-const employmentStatus = '';
-const jobTitle = '';
-const dreamProfession = ''
-const favAnimal = '';
-const favGame = ''; // i.e. monopoly, uno, tag, etc.
-const favColor = '';
-const favMusicGenre = '';
-const favAthlete = '';
-const favCeleb = '';
-const favHobby = '';
-const favWeapon = '';
-const anotherWeapon = '';
-const streetName = '';
-const mood = ''; // i.e. angry, happy, sad, etc.
-const ethnicity = '';
-const modeOfTransportation = '';
-const zodiacSign = '';
-const personalityTrait = ''; // i.e. bold, quiet, energetic, etc.
-const drinkOfChoice = '';
-const bestFeature = ''; // i.e. tall, dark, handsome, etc.
+const firstName = 'Harry';
+const middleName = 'Rufino';
+const lastName = 'Schwartz';
+const nickname = 'Wizard';
+const pronouns = 'He/Himothee';
+const employmentStatus = 'Student';
+const jobTitle = 'Founder';
+const dreamProfession = 'Astronaut'
+const favAnimal = 'Gazelle';
+const favGame = 'Catan'; // i.e. monopoly, uno, tag, etc.
+const favColor = 'Green';
+const favMusicGenre = 'Indie Pop';
+const favAthlete = 'Justin Jefferson';
+const favCeleb = 'Margot Robbie';
+const favHobby = 'Tennis';
+const favWeapon = 'Katana';
+const anotherWeapon = 'Dagger';
+const streetName = 'Prince';
+const mood = 'Jubilant'; // i.e. angry, happy, sad, etc.
+const ethnicity = 'Jewlapino';
+const modeOfTransportation = 'F150';
+const zodiacSign = 'Cancer';
+const personalityTrait = 'Curious'; // i.e. bold, quiet, energetic, etc.
+const drinkOfChoice = 'Spindrift';
+const bestFeature = 'Driven'; // i.e. tall, dark, handsome, etc.
 
 const inputs = [
     firstName, 
@@ -51,7 +51,7 @@ const inputs = [
     personalityTrait, 
     drinkOfChoice, 
     bestFeature
-]; // 25 total
+]; 
 
 // Preset classes. Do not change.
 const dndClasses = [
@@ -67,7 +67,7 @@ const dndClasses = [
     "Sorcerer",
     "Warlock",
     "Wizard"
-]; // 12 total
+]; 
 
 // Preset races. Do not change.
 const dndRaces = [
@@ -80,7 +80,7 @@ const dndRaces = [
     "Half-Elf",
     "Half-Orc",
     "Tiefling"
-]; // 9 total
+]; 
 
 // gets random item from the arrays above
 function getRandomItem(array) {
@@ -89,11 +89,17 @@ function getRandomItem(array) {
 }
 
 // generateCharacter() function
-// output type A: __firstName__ __lastName___, a __race__ __class___
-// output type B: __name__ the __adj___, a __race___ __class___
+// output type A: __firstName__ __lastName___, a __race__ __class___ FINISHED
+// output type B: __name__ the __adj___, a __race___ __class___ TO DO
 function generateCharacter() {
-let name = getRandomItem(inputs) + ' ' + getRandomItem(inputs);
-let race = getRandomItem(dndRaces);
-let class = getRandomItem(dndClasses);
-console.log(`${name}, a ${race} ${class}`);
+    let name = getRandomItem(inputs) + ' ' + getRandomItem(inputs); // Type A
+    let outputType = Math.random(); // Randomization
+    if (outputType >= 0.5) {
+        name = getRandomItem(inputs) + ' the ' + getRandomItem(inputs); // Tpe B
+    };
+let dndRace = getRandomItem(dndRaces);
+let dndClass = getRandomItem(dndClasses);
+console.log(`${name}, a ${dndRace} ${dndClass}`);
 };
+
+generateCharacter();
