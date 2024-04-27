@@ -18,7 +18,17 @@ const dndClasses = [
 ];
 
 // preset races
-
+const dndRaces = [
+    "Human",
+    "Elf",
+    "Dwarf",
+    "Halfling",
+    "Dragonborn",
+    "Gnome",
+    "Half-Elf",
+    "Half-Orc",
+    "Tiefling"
+];
 
 
 // generateCharacter() function
