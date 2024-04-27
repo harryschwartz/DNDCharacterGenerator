@@ -25,6 +25,33 @@ const personalityTrait = ''; // i.e. bold, quiet, energetic, etc.
 const drinkOfChoice = '';
 const bestFeature = ''; // i.e. tall, dark, handsome, etc.
 
+const inputs = [
+    firstName, 
+    middleName, 
+    lastName, 
+    nickname, 
+    pronouns, 
+    employmentStatus, 
+    jobTitle, 
+    dreamProfession,
+    favAnimal, 
+    favGame, 
+    favColor, 
+    favMusicGenre, 
+    favAthlete, 
+    favCeleb, 
+    favHobby, 
+    favWeapon, 
+    anotherWeapon, 
+    streetName, 
+    mood, 
+    race, 
+    modeOfTransportation, 
+    zodiacSign, 
+    personalityTrait, 
+    drinkOfChoice, 
+    bestFeature
+];
 
 // Preset classes. Do not change.
 const dndClasses = [
