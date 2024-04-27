@@ -18,7 +18,7 @@ const favWeapon = '';
 const anotherWeapon = '';
 const streetName = '';
 const mood = ''; // i.e. angry, happy, sad, etc.
-const race = '';
+const ethnicity = '';
 const modeOfTransportation = '';
 const zodiacSign = '';
 const personalityTrait = ''; // i.e. bold, quiet, energetic, etc.
@@ -45,13 +45,13 @@ const inputs = [
     anotherWeapon, 
     streetName, 
     mood, 
-    race, 
+    ethnicity, 
     modeOfTransportation, 
     zodiacSign, 
     personalityTrait, 
     drinkOfChoice, 
     bestFeature
-];
+]; // 25 total
 
 // Preset classes. Do not change.
 const dndClasses = [
@@ -67,7 +67,7 @@ const dndClasses = [
     "Sorcerer",
     "Warlock",
     "Wizard"
-];
+]; // 12 total
 
 // Preset races. Do not change.
 const dndRaces = [
@@ -80,7 +80,20 @@ const dndRaces = [
     "Half-Elf",
     "Half-Orc",
     "Tiefling"
-];
+]; // 9 total
 
+// gets random item from the arrays above
+function getRandomItem(array) {
+    const randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+}
 
 // generateCharacter() function
+// output type A: __firstName__ __lastName___, a __race__ __class___
+// output type B: __name__ the __adj___, a __race___ __class___
+function generateCharacter() {
+let name = getRandomItem(inputs) + ' ' + getRandomItem(inputs);
+let race = getRandomItem(dndRaces);
+let class = getRandomItem(dndClasses);
+console.log(`${name}, a ${race} ${class}`);
+};
